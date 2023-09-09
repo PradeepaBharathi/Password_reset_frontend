@@ -55,7 +55,7 @@ function Register() {
         else {
             // console.log("user registered successfully")
 
-            const data = await fetch("http://localhost:9000/user/signup", {
+            const data = await fetch("https://passwordbackend-5fj3.onrender.com/user/signup", {
                 method: "POST",
                 headers: {
                     "Content-Type":"application/json"

@@ -8,7 +8,7 @@ function ForgotPassword() {
   const[password,setPassword] = useState("")
   const [message,setMessage]=useState("")
   const userValid = async () => {
-    const res = await fetch(`http://localhost:9000/user/forgot-password/${id}/${token}`, {
+    const res = await fetch(`https://passwordbackend-5fj3.onrender.com/user/forgot-password/${id}/${token}`, {
       method: "GET",
       headers: {
         "Content-Type": "Application/json"
@@ -31,7 +31,7 @@ function ForgotPassword() {
 
   const sendPassword = async (e) => {
     e.preventDefault()
-    const res = await fetch(`http://localhost:9000/user/resetPassword/${id}`, {
+    const res = await fetch(`https://passwordbackend-5fj3.onrender.com/user/resetPassword/${id}`, {
       method: "POST",
       headers: {
         "Content-Type": "Application/json"

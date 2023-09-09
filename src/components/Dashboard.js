@@ -7,7 +7,7 @@ function Dashboard() {
     const DashboardValid = async () => {
         let token = localStorage.getItem("userData")
         console.log(token)
-        const res = await fetch("http://localhost:9000/user/getUserById",{
+        const res = await fetch("https://passwordbackend-5fj3.onrender.com/user/getUserById",{
             method: "GET",
             headers: {
                 "Content-Type": "application.json",
