@@ -45,7 +45,7 @@ function Login() {
         }
         else {
            
-            const data = await fetch("https://passwordbackend-5fj3.onrender.com/user/login", {
+            const data = await fetch("https://password-7woa.onrender.com/user/login", {
                 method: "POST",
                 headers: {
                     "Content-Type":"application/json"

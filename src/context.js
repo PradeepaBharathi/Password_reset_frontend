@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useContext, useState } from "react";
 
-const Base_URL = "https://passwordbackend-5fj3.onrender.com/user"
+const Base_URL = "https://password-7woa.onrender.com/user"
 
 const GlobalContext = React.createContext();
 export const GlobalProvider = ({ children }) => { 
