@@ -7,14 +7,16 @@ function Dashboard() {
     const DashboardValid = async () => {
         let token = localStorage.getItem("userData")
         console.log(token)
-        const res = await fetch("https://password-7woa.onrender.com/user/getUserById",{
+        const res = await fetch(
+          "https://password-7woa.onrender.com/user/getUserById",
+          {
             method: "GET",
             headers: {
-                "Content-Type": "application.json",
-                "x-auth-token":token
-            }
-
-        })
+              "Content-Type": "application.json",
+              "x-auth-token": token,
+            },
+          }
+        );
 
         const data = await res.json()
         if (data.status == 401 || !data) {

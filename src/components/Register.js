@@ -55,15 +55,21 @@ function Register() {
         else {
             // console.log("user registered successfully")
 
-            const data = await fetch("https://password-7woa.onrender.com/user/signup", {
+            const data = await fetch(
+              "https://password-7woa.onrender.com/user/signup",
+              {
                 method: "POST",
                 headers: {
-                    "Content-Type":"application/json"
+                  "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    fname,email,password,cpassword
-                })
-            })
+                  fname,
+                  email,
+                  password,
+                  cpassword,
+                }),
+              }
+            );
 
             const res = await data.json()
             if (res.status===201) {

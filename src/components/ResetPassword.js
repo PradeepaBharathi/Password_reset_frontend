@@ -10,15 +10,16 @@ function ResetPassword() {
     const sendLink = async (e) => {
         e.preventDefault()
 
-        const res = await fetch("https://password-7woa.onrender.com/user/sendpasswordlink", {
+        const res = await fetch(
+          "https://password-7woa.onrender.com/user/sendpasswordlink",
+          {
             method: "POST",
             headers: {
-                "Content-Type":"application/json"
+              "Content-Type": "application/json",
             },
-            body:JSON.stringify({email})
-        }
-            
-        )
+            body: JSON.stringify({ email }),
+          }
+        );
 
         const data = await res.json()
         if (data.status === 201) {
